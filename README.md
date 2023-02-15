@@ -25,3 +25,23 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+
+
+
+
+-crear un nuevo espacio de trabajo y un proyecto
+
+ng new angular-tour-of-heroes
+
+-directorio del espacio de trabajo e inicie la aplicación
+cd angular-tour-of-heroes
+ng serve --open
+
+-nuevo componente
+ng generate component heroes
+
+-Instalar paquete de API web en memoria desde npm
+npm install angular-in-memory-web-api --save
