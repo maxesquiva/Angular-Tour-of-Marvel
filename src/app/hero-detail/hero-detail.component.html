@@ -10,7 +10,8 @@
     <button type="button" (click)="goBack()">go back</button>
     <button type="button" (click)="save()">Save</button>
 <div> -->
-  <div *ngFor="let hero of allHeroes">
+
+  <!-- <div *ngFor="let hero of allHeroes">
     <h2>{{hero.name | uppercase}} Details</h2>
     <div><span>id: </span>{{hero.id}}</div>
     <div>
@@ -27,4 +28,49 @@
   </div>
   <h1 class="text-3xl font-bold underline">
     Hello world!
-  </h1>
+  </h1> -->
+
+
+  <div class="mt-8 w-[24%] container flex flex-wrap items-center justify-between mx-auto " *ngFor="let hero of allHeroes">
+
+    <div class="backdrop  bg-white bg-opacity-10 rounded p-3 text-white border border-white shadow-lg ">
+      <!-- header -->
+      <div class="w-full mb-3 pb-3 border-b border-1 border-white">
+        <h3 class="text-xl font-semibold text-shadow">Hero Name: {{hero.name}}</h3>
+        <!-- <p>
+          Hero Name: {{hero.name}}
+        </p> -->
+      </div>
+      <!-- body -->
+      <div class="">
+        <!-- <img src="https://i.postimg.cc/J4khxLqf/bg02.jpg" alt="image2" class="w-full h-[200] object-cover mb-2"> -->
+        <img class="f1 object-cover mb-2 inline-grid " src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}" alt="{{hero.name}}">
+        <div>id: {{hero.id}}</div>
+        <p class="mb-3 tracking-wide text-base text-shadow">
+          <strong>Description:</strong> {{hero.description}}
+        </p>
+      </div>
+    </div>
+  </div>
+  <button type="button" (click)="goBack()" class="bg-[#f78f3f] hover:bg-orange-500 text-gray-800 font-bold py-2 px-4  ml-[4%] rounded mb-3"> ⭪ Go Back</button>
+  <!-- <button type="button" (click)="goBack()">go back</button> -->
+
+
+
+
+  <!-- <div class="backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded p-3 text-white border border-white shadow-lg container flex flex-wrap items-center justify-between mx-auto">
+
+    <div class="w-full mb-3 pb-3 border-b border-1 border-white">
+      <h3 class="text-xl font-semibold text-shadow">Something Good</h3>
+    </div>
+
+    <div>
+      <img src="https://i.postimg.cc/J4khxLqf/bg02.jpg" alt="image2" class="w-full h-48 object-cover mb-2">
+      <p class="mb-3 tracking-wide text-base text-shadow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, omnis.
+      </p>
+      <button class="backdrop bg-white bg-opacity-0 border border-white px-3 py-1.5 rounded focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-40 hover:bg-opacity-10 text-lg">
+        Detail
+      </button>
+    </div>
+  </div> -->

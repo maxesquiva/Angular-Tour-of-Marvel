@@ -38,12 +38,12 @@
 //   // align-self: center;
 // }
 
-// @media (min-width: 600px) {
-//   a {
-//     width: 18%;
-//     box-sizing: content-box;
-//   }
-// }
+@media (min-width: 600px) {
+  a {
+    width: 18%;
+    box-sizing: content-box;
+  }
+}
 
 a:hover {
   background-color: #000;

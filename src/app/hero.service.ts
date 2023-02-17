@@ -42,7 +42,7 @@ export class HeroService {
           '&offset=' +
           Math.floor(Math.random() * 1562) +
           '&limit=' +
-          10
+          12
       )
       .pipe(map((data: Hero) => data.data.results));
   }

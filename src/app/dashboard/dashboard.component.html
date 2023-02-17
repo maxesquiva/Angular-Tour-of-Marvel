@@ -1,14 +1,14 @@
 <app-hero-search></app-hero-search>
 
-<div class="flex mt-[5%] ">
-  <div class=" justify-between ml-[4.5%]">
-    <a *ngFor="let hero of allHeroes" routerLink="/detail/{{hero.id}}"
+<div class="flex mt-[5%] flex  flex-wrap  justify-center ">
+  <div class="ml-[8%]">
+    <a *ngFor="let hero of allHeroes" routerLink="/detail/{{hero.id}} "
       class="text-center inline-grid  bg-white bg-opacity-10 rounded p-3 text-white border border-gray-300 shadow-lg mb-[2%] ml-[20px]">
-      <img class="w-[200px] h-[200px] w-full mb-3 pb-3 border-b border-1 border-white"
+      <img class="w-[200px] h-[200px] border-b border-1 border-white"
         src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}" alt="{{hero.name}}">
-      <div>
-        {{hero.name}}
+      <div class="w-full mb-3 pb-3 border-b border-1 border-white">
       </div>
+      {{hero.name}}
     </a>
   </div>
 </div>
@@ -19,9 +19,9 @@ li {
   z-index: 1;
 } -->
 
+<!--
 
-
-<!-- <div class="">
+<div class="">
   <div class="bg-image w-full min-h-screen ">
     <div class="backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded p-3 text-white border border-gray-300 shadow-lg">
 
