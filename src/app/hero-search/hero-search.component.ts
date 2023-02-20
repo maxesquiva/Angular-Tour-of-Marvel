@@ -16,18 +16,15 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
   templateUrl: './hero-search.component.html',
   styleUrls: ['./hero-search.component.scss']
 })
-export class HeroSearchComponent {
+export class HeroSearchComponent implements OnInit{
+  value='';
   // heroes$!: Observable<Hero[]>;
   allHeroes: Results[];
   heroesEncontrado$: Observable<Results[]> = of([]);
-  private searchTerms = new Subject<string>();
+  // private searchTerms = new Subject<string>();
+  private searchTerms: Subject<string> = new Subject();
 
   constructor(private heroService: HeroService){}
-
-  search(term: string): void {
-    this.searchTerms.next(term);
-    console.log(term);
-  }
 
 
   ngOnInit(): void{
@@ -37,5 +34,13 @@ export class HeroSearchComponent {
       switchMap((term: string) => this.heroService.getSearchHero(term)),
       );
   }
+
+
+
+  search(term: string): void {
+    this.searchTerms.next(term);
+    console.log(term);
+  }
+
 
 }

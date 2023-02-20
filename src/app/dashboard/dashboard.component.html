@@ -2,7 +2,7 @@
 
 <div class="flex mt-[5%] flex  flex-wrap  justify-center ">
   <div class="ml-[8%]">
-    <a *ngFor="let hero of allHeroes" routerLink="/detail/{{hero.id}} "
+    <a *ngFor="let hero of allHeroes" routerLink="/detail/{{hero.id}}"
       class="text-center inline-grid  bg-white bg-opacity-10 rounded p-3 text-white border border-gray-300 shadow-lg mb-[2%] ml-[20px]">
       <img class="w-[200px] h-[200px] border-b border-1 border-white"
         src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}" alt="{{hero.name}}">

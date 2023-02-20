@@ -31,12 +31,12 @@
   </h1> -->
 
 
-  <div class="mt-8 w-[24%] container flex flex-wrap items-center justify-between mx-auto " *ngFor="let hero of allHeroes">
+  <div class="mt-8 w-[24%] container flex flex-wrap items-center justify-between mx-auto w-1/4 md:w-1/2 lg:w-[500px]" *ngFor="let hero of allHeroes ">
 
     <div class="backdrop  bg-white bg-opacity-10 rounded p-3 text-white border border-white shadow-lg ">
       <!-- header -->
-      <div class="w-full mb-3 pb-3 border-b border-1 border-white">
-        <h3 class="text-xl font-semibold text-shadow">Hero Name: {{hero.name}}</h3>
+      <div class="w-full mb-3 pb-3 border-b border-1 border-white ">
+        <h3 class="text-xl font-semibold text-shadow max-[320px]:text-[14px]">Hero Name: {{hero.name}}</h3>
         <!-- <p>
           Hero Name: {{hero.name}}
         </p> -->
@@ -44,15 +44,15 @@
       <!-- body -->
       <div class="">
         <!-- <img src="https://i.postimg.cc/J4khxLqf/bg02.jpg" alt="image2" class="w-full h-[200] object-cover mb-2"> -->
-        <img class="f1 object-cover mb-2 inline-grid " src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}" alt="{{hero.name}}">
+        <img class="f1 object-cover mb-2 inline-grid w-[500px] h-[500px] m-[320px]:w-auto max-[320px]:h-auto max-[320px]:w-auto min-[320px]:h-auto" src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}" alt="{{hero.name}}">
         <div>id: {{hero.id}}</div>
-        <p class="mb-3 tracking-wide text-base text-shadow">
+        <p class="mb-3 tracking-wide text-base text-shadow max-[320px]:text-[14px]">
           <strong>Description:</strong> {{hero.description}}
         </p>
       </div>
     </div>
   </div>
-  <button type="button" (click)="goBack()" class="bg-[#f78f3f] hover:bg-orange-500 text-gray-800 font-bold py-2 px-4  ml-[4%] rounded mb-3"> ⭪ Go Back</button>
+  <button type="button" (click)="goBack()" class="bg-[#f78f3f] hover:bg-orange-500 max-[320px]:mt-[30%] text-gray-800 font-bold py-2 px-4  ml-[4%] rounded mb-3"> ⭪ Go Back</button>
   <!-- <button type="button" (click)="goBack()">go back</button> -->
 
 

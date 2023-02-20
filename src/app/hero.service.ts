@@ -54,6 +54,9 @@ export class HeroService {
   }
 
   getSearchHero(name: string): Observable<Results[]> {
+    if (!name.trim()) {
+      return of([]);
+    }
     return this.http
     //&nameStartsWith= nombre que empieza con + nombre que quieras
       .get<Hero>(this.apiUrl + '?nameStartsWith=' + name + this.ts + this.apiKeyHash)
